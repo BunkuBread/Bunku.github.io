@@ -4,7 +4,6 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background-image: url('assets/images/TheBackground.jpg');
   background-repeat: repeat;
-  background-size: 180px 180px; /* Adjust for your pattern */
   background-position: top left;
 }
 
