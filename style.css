@@ -2,9 +2,13 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background-image: url('assets/images/TheBackground.jpg');
-  background-repeat: repeat;
-  background-position: top left;
+  /* Brick/offset pattern using two layers */
+  background-image:
+    url('assets/images/TheBackground.jpg'),
+    url('assets/images/TheBackground.jpg');
+  background-repeat: repeat, repeat;
+  background-position: 0 0, 50px 50px; /* Offset by half tile size */
+  /* Replace 50px 50px with half your tile's width and height if your image is not 100x100px */
 }
 
 .main-content {
@@ -13,7 +17,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.92); /* Subtle white overlay for readability */
+  background: rgba(255,255,255,0.92);
   box-sizing: border-box;
   padding: 40px 20px;
   border-radius: 20px;
