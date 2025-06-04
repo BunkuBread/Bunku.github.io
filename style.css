@@ -1,6 +1,13 @@
-body {
+html, body {
+  height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: #fffbe9;
   color: #4d3b2f;
 }
@@ -121,35 +128,78 @@ body {
   transform: translateY(-2px) scale(1.04);
 }
 
-footer {
-  background: #f7e7c4;
+/* Sticky, fun footer */
+.site-footer {
+  flex-shrink: 0;
+  background: linear-gradient(90deg, #fff3d1 0%, #ffe1b2 100%);
   color: #a0522d;
-  padding: 22px 0 10px 0;
+  padding: 24px 0 12px 0;
   text-align: center;
-  font-size: 1rem;
   border-top: 2px solid #ffb347;
+  box-shadow: 0 -2px 12px rgba(255,179,71,0.06);
+  width: 100%;
+  margin-top: auto;
+  position: relative;
+  z-index: 2;
 }
 
-.footer-contact {
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(255,179,71,0.12);
+  background: #fff;
   margin-bottom: 6px;
+  transition: transform 0.2s;
+}
+.footer-logo:hover {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .footer-link {
   color: #a0522d;
   text-decoration: none;
-  font-weight: bold;
-  margin: 0 4px;
-  transition: color 0.2s;
+  font-weight: 500;
+  font-size: 1.08rem;
+  transition: color 0.2s, background 0.2s;
+  padding: 2px 6px;
+  border-radius: 6px;
 }
 
 .footer-link:hover {
   color: #ffb347;
+  background: #fffbe9;
+}
+
+.footer-icon svg {
+  vertical-align: middle;
+  transition: transform 0.2s, filter 0.2s;
+}
+.footer-icon:hover svg {
+  transform: scale(1.18) rotate(-8deg);
+  filter: drop-shadow(0 0 4px #ffb34788);
 }
 
 .footer-copy {
-  font-size: 0.95rem;
+  font-size: 0.97rem;
   color: #a0522d;
   opacity: 0.7;
+  margin-top: 10px;
 }
 
 @media (max-width: 700px) {
@@ -164,5 +214,20 @@ footer {
   .slogan-img {
     max-width: 98vw;
     max-height: 110px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .footer-links {
+    gap: 10px;
+    font-size: 0.98rem;
+  }
+  .footer-logo {
+    width: 36px;
+    height: 36px;
   }
 }
