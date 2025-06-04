@@ -1,77 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bunku Bread - Our Story</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Welcome Section -->
-  <section class="welcome-section">
-    <img src="assets/images/BunkuBreadSlogan.jpg" alt="Bunku Bread Slogan" class="slogan-img">
-  </section>
-
-  <!-- Our Story Panel -->
-  <section class="panel">
-    <h2>Our Story</h2>
-    <div class="story-content" id="storyContent">
-      <p>
-        Bunku Bread started with a love for baking and a dream to bring the taste of viral Korean bread to the UAE. 
-        <span id="dots">...</span>
-        <span id="more" style="display:none;">
-          <br><br>
-          What began as a small kitchen experiment quickly grew into a local sensation, with friends and family raving about the soft, fluffy loaves and unique flavors. 
-          <br><br>
-          Today, Bunku Bread is a beloved brand, sharing joy and deliciousness with every bite.
-        </span>
-      </p>
-      <button onclick="showMore()" id="readMoreBtn">Read more</button>
+<footer class="site-footer">
+  <div class="footer-content">
+    <img src="assets/images/BunkuBreadLogo.jpg" alt="Bunku Bread Logo" class="footer-logo">
+    <div class="footer-links">
+      <a href="https://instagram.com/Bunku.uae" target="_blank" rel="noopener" aria-label="Instagram" class="footer-icon">
+        <svg width="26" height="26" fill="none" viewBox="0 0 26 26">
+          <circle cx="13" cy="13" r="12" stroke="#ffb347" stroke-width="2"/>
+          <path d="M17 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-4 2.5A2.5 2.5 0 1 1 10.5 14 2.5 2.5 0 0 1 13 11.5zm0-4.5A6 6 0 1 1 7 13a6 6 0 0 1 6-6z" stroke="#ffb347" stroke-width="1.2"/>
+        </svg>
+      </a>
+      <a href="https://tiktok.com/@Bunku.uae" target="_blank" rel="noopener" class="footer-icon" aria-label="TikTok" style="display:flex; align-items:center; gap:4px; font-weight:bold; color:#a0522d; text-decoration:none;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffb347" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+          <path d="M9 18c-3 0-5-2-5-5 0-1.5.75-2.75 2-3.5v7M9 3v7h4a3 3 0 0 0 3-3V3" />
+        </svg>
+        @Bunku.uae
+      </a>
+      <a href="tel:0544588113" class="footer-link">054 458 8113</a>
+      <a href="mailto:Bunku.uae@gmail.com" class="footer-link">Bunku.uae@gmail.com</a>
     </div>
-  </section>
-
-  <!-- Founder Section -->
-  <section class="founder-section">
-    <h3>Founder</h3>
-    <img src="assets/images/founder.jpg" alt="Founder" class="founder-img">
-    <div class="founder-story">
-      <p>
-        Meet Ahmed, the mastermind behind Bunku Bread. One day, he looked at a loaf of bread and thought, "What if this was fluffier?" The rest is history. Now he bakes, dreams, and sometimes even eats the bread.
-      </p>
-    </div>
-  </section>
-
-  <!-- Place an Order Button -->
-  <section class="order-section">
-    <a href="order.html" class="order-btn">Place an order</a>
-  </section>
-
-  <!-- Sticky, Fun Footer -->
-  <footer class="site-footer">
-    <div class="footer-content">
-      <img src="assets/images/BunkuBreadLogo.jpg" alt="Bunku Bread Logo" class="footer-logo">
-      <div class="footer-links">
-        <a href="https://instagram.com/bunku.ae" target="_blank" rel="noopener" aria-label="Instagram" class="footer-icon">
-          <svg width="26" height="26" fill="none" viewBox="0 0 26 26">
-            <circle cx="13" cy="13" r="12" stroke="#ffb347" stroke-width="2"/>
-            <path d="M17 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-4 2.5A2.5 2.5 0 1 1 10.5 14 2.5 2.5 0 0 1 13 11.5zm0-4.5A6 6 0 1 1 7 13a6 6 0 0 1 6-6z" stroke="#ffb347" stroke-width="1.2"/>
-          </svg>
-        </a>
-        <a href="tel:0562855515" class="footer-link">056 285 5515</a>
-        <a href="mailto:abooalm@gmail.com" class="footer-link">abooalm@gmail.com</a>
-      </div>
-    </div>
-    <div class="footer-copy">
-      &copy; 2025 Bunku Bread. All rights reserved.
-    </div>
-  </footer>
-
-  <script>
-    function showMore() {
-      document.getElementById("dots").style.display = "none";
-      document.getElementById("more").style.display = "inline";
-      document.getElementById("readMoreBtn").style.display = "none";
-    }
-  </script>
-</body>
-</html>
+  </div>
+  <div class="footer-copy">
+    &copy; 2025 Bunku Bread. All rights reserved.
+  </div>
+</footer>
