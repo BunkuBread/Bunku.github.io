@@ -3,12 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bunku Bread!!!</title>
+  <title>Bunku Bread - Our Story</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="center-content">
+  <!-- Welcome Section -->
+  <section class="welcome-section">
     <img src="assets/images/BunkuBreadSlogan.jpg" alt="Bunku Bread Slogan" class="slogan-img">
-  </div>
+  </section>
+
+  <!-- Our Story Panel -->
+  <section class="panel">
+    <h2>Our Story</h2>
+    <div class="story-content" id="storyContent">
+      <p>
+        Bunku Bread started with a love for baking and a dream to bring the taste of viral Korean bread to the UAE. 
+        <span id="dots">...</span>
+        <span id="more" style="display:none;">
+          <br><br>
+          What began as a small kitchen experiment quickly grew into a local sensation, with friends and family raving about the soft, fluffy loaves and unique flavors. 
+          <br><br>
+          Today, Bunku Bread is a beloved brand, sharing joy and deliciousness with every bite.
+        </span>
+      </p>
+      <button onclick="showMore()" id="readMoreBtn">Read more</button>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section class="founder-section">
+    <h3>Founder</h3>
+    <img src="assets/images/founder.jpg" alt="Founder" class="founder-img">
+    <div class="founder-story">
+      <p>
+        Meet Ahmed, the mastermind behind Bunku Bread. One day, he looked at a loaf of bread and thought, "What if this was fluffier?" The rest is history. Now he bakes, dreams, and sometimes even eats the bread.
+      </p>
+    </div>
+  </section>
+
+  <!-- Place an Order Button -->
+  <section class="order-section">
+    <a href="order.html" class="order-btn">Place an order</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-contact">
+      <a href="https://instagram.com/bunku.ae" target="_blank" rel="noopener" class="footer-link">Instagram: @bunku.ae</a>
+      <span> | </span>
+      <a href="tel:0562855515" class="footer-link">056 285 5515</a>
+      <span> | </span>
+      <a href="mailto:abooalm@gmail.com" class="footer-link">abooalm@gmail.com</a>
+    </div>
+    <div class="footer-copy">
+      &copy; 2025 Bunku Bread. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    function showMore() {
+      document.getElementById("dots").style.display = "none";
+      document.getElementById("more").style.display = "inline";
+      document.getElementById("readMoreBtn").style.display = "none";
+    }
+  </script>
 </body>
 </html>
