@@ -29,7 +29,10 @@
         Bunku Bread is a <strong>home-based business</strong> that started with a love for baking and a dream to bring the taste of viral Korean bread to the UAE.
         <span id="dots">...</span>
         <span id="more" style="display: none;">
-          <span id="typewriter"></span>
+          <br /><br />
+          What began as a small kitchen experiment quickly grew into a local sensation, with friends and family raving about the soft, fluffy loaves and unique flavors.
+          <br /><br />
+          Today, Bunku Bread is a beloved brand, sharing joy and deliciousness with every bite—all from the comfort of our home kitchen.
         </span>
       </p>
       <button onclick="showMore()" id="readMoreBtn">Read more</button>
@@ -71,75 +74,17 @@
   </footer>
 
   <script>
-    const moreText =
-      "What began as a small kitchen experiment quickly grew into a local sensation, with friends and family raving about the soft, fluffy loaves and unique flavors.\n\nToday, Bunku Bread is a beloved brand, sharing joy and deliciousness with every bite—all from the comfort of our home kitchen.";
-
-    let typingInterval;
-    let isAnimating = false;
-
     function showMore() {
-      if (isAnimating) return;
-      isAnimating = true;
-      const panel = document.getElementById("storyPanel");
-      const more = document.getElementById("more");
-      const dots = document.getElementById("dots");
-      const btn = document.getElementById("readMoreBtn");
-      const lessBtn = document.getElementById("showLessBtn");
-      const typeTarget = document.getElementById("typewriter");
-      typeTarget.innerHTML = "";
-      more.style.display = "inline";
-      btn.style.display = "none";
-      lessBtn.style.display = "none";
-      dots.style.display = "none";
-      panel.classList.add("bounce-down");
-      setTimeout(() => {
-        panel.classList.remove("bounce-down");
-        typeTypewriter(moreText, typeTarget, () => {
-          lessBtn.style.display = "inline-block";
-          isAnimating = false;
-        });
-      }, 500);
+      document.getElementById("more").style.display = "inline";
+      document.getElementById("readMoreBtn").style.display = "none";
+      document.getElementById("showLessBtn").style.display = "inline-block";
+      document.getElementById("dots").style.display = "none";
     }
-
     function showLess() {
-      if (isAnimating) return;
-      isAnimating = true;
-      const panel = document.getElementById("storyPanel");
-      const more = document.getElementById("more");
-      const dots = document.getElementById("dots");
-      const btn = document.getElementById("readMoreBtn");
-      const lessBtn = document.getElementById("showLessBtn");
-      const typeTarget = document.getElementById("typewriter");
-      lessBtn.style.display = "none";
-      panel.classList.add("bounce-up");
-      setTimeout(() => {
-        panel.classList.remove("bounce-up");
-        more.style.display = "none";
-        typeTarget.innerHTML = "";
-        btn.style.display = "inline-block";
-        dots.style.display = "inline";
-        isAnimating = false;
-      }, 500);
-    }
-
-    function typeTypewriter(text, target, callback) {
-      let i = 0;
-      target.innerHTML = "";
-      function type() {
-        if (i < text.length) {
-          let char = text[i];
-          if (char === "\n") {
-            target.innerHTML += "<br>";
-          } else {
-            target.innerHTML += char;
-          }
-          i++;
-          typingInterval = setTimeout(type, 18);
-        } else {
-          if (callback) callback();
-        }
-      }
-      type();
+      document.getElementById("more").style.display = "none";
+      document.getElementById("readMoreBtn").style.display = "inline-block";
+      document.getElementById("showLessBtn").style.display = "none";
+      document.getElementById("dots").style.display = "inline";
     }
   </script>
 </body>
