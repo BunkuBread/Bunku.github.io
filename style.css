@@ -90,12 +90,21 @@ body {
 }
 
 .slogan-img {
-  max-width: 90vw;
-  max-height: 180px;
+  max-width: 340px;
+  width: 100%;
+  height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  /* Remove border-radius and box-shadow for a clean look */
+  border-radius: 0;
+  box-shadow: none;
+  /* Make it bigger on desktop */
+}
+
+@media (min-width: 700px) {
+  .slogan-img {
+    max-width: 480px;
+  }
 }
 
 .panel {
