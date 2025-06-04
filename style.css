@@ -90,20 +90,18 @@ body {
 }
 
 .slogan-img {
-  max-width: 200px;
-  width: 100%;
+  width: 280px;
+  max-width: 90vw;
   height: auto;
   display: block;
   margin: 0 auto;
-  /* Remove border-radius and box-shadow for a clean look */
   border-radius: 0;
   box-shadow: none;
-  /* Make it bigger on desktop */
 }
 
 @media (min-width: 700px) {
   .slogan-img {
-    max-width: 480px;
+    width: 360px;
   }
 }
 
@@ -283,7 +281,7 @@ body {
   }
   .slogan-img {
     max-width: 98vw;
-    max-height: 110px;
+    height: auto;
   }
 }
 
