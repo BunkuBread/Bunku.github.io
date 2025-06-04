@@ -108,26 +108,6 @@ body {
   text-align: center;
   position: relative;
   z-index: 1;
-  transition: box-shadow 0.3s, transform 0.5s cubic-bezier(.68,-0.55,.27,1.55);
-}
-
-/* Bounce down/up animation for panel */
-.bounce-down {
-  animation: bounceDown 0.5s;
-}
-@keyframes bounceDown {
-  0% { transform: translateY(0); box-shadow: 0 4px 24px rgba(0,0,0,0.08);}
-  60% { transform: translateY(35px) scaleY(1.08); box-shadow: 0 12px 40px rgba(0,0,0,0.13);}
-  100% { transform: translateY(0); box-shadow: 0 4px 24px rgba(0,0,0,0.08);}
-}
-
-.bounce-up {
-  animation: bounceUp 0.5s;
-}
-@keyframes bounceUp {
-  0% { transform: translateY(0); box-shadow: 0 4px 24px rgba(0,0,0,0.08);}
-  60% { transform: translateY(-35px) scaleY(0.96); box-shadow: 0 0px 0px rgba(0,0,0,0.04);}
-  100% { transform: translateY(0); box-shadow: 0 4px 24px rgba(0,0,0,0.08);}
 }
 
 .panel h2 {
@@ -160,19 +140,6 @@ body {
 
 #readMoreBtn:hover, #showLessBtn:hover {
   background: #ffa500;
-}
-
-#typewriter {
-  display: inline;
-  font-family: inherit;
-  border-right: 2px solid #ffb347;
-  white-space: pre-line;
-  animation: blink-caret 0.7s steps(1) infinite;
-}
-
-@keyframes blink-caret {
-  0%,100% { border-color: transparent; }
-  50% { border-color: #ffb347; }
 }
 
 .order-section {
