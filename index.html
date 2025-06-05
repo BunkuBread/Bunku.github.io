@@ -3,127 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bunku Bread Order</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <title>Bunku Bread - Our Story</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
 </head>
 <body>
-  <div class="gradient-bg"></div>
-  <main class="order-main">
-    <a href="https://bunkubread.github.io/Bunku.github.io/" target="_blank" class="return-btn">
-      ← Return to Main Website
-    </a>
-    <img src="images/BunkuBreadLogo.jpg" alt="Bunku Bread Logo" class="logo-img" />
-    <h1>Order Bunku Bread</h1>
-    <p class="subtitle">Freshly baked, home-based, and delivered with love in the UAE.</p>
-    <form class="order-form" id="orderForm" autocomplete="off" novalidate>
-      <div class="order-type-row">
-        <label>
-          <input type="radio" name="orderType" value="pickup" checked />
-          Pick Up
-        </label>
-        <label>
-          <input type="radio" name="orderType" value="delivery" />
-          Delivery (+35 AED)
-        </label>
-      </div>
-      <label>
-        First Name<br />
-        <input type="text" name="firstName" required />
-      </label>
-      <label>
-        Last Name<br />
-        <input type="text" name="lastName" required />
-      </label>
-      <div id="pickupFields">
-        <label>
-          License Plate<br />
-          <input type="text" name="licensePlate" maxlength="15" placeholder="e.g. D 12345" />
-        </label>
-        <div class="pickup-map-note">
-          <b>Pick Up Location:</b>
-          <div class="pickup-map-responsive">
-            <iframe src="https://www.google.com/maps/embed?pb=!4v1749073141887!6m8!1m7!1sgliNmXuCBP5nc9Mr1eToSw!2m2!1d25.36370213556116!2d55.42016081354442!3f311.7563987474596!4f-4.8047437432611275!5f0.7820865974627469"
-              width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <div style="font-size:0.97em; color:#a0522d; margin-top:4px;">
-            This is where you can pick up your order.
-          </div>
-        </div>
-      </div>
-      <div id="deliveryFields" style="display: none;">
-        <div class="location-mobile-note">
-          <b>Note:</b> Location works best on <span style="color:#ffb347;">mobile</span>!<br>
-          If the marker isn't correct, drag it or tap the map to adjust.<br>
-        </div>
-        <label>
-          City<br />
-          <input type="text" name="city" id="cityInput" autocomplete="address-level2" required />
-        </label>
-        <label>
-          Street / Building Name<br />
-          <input type="text" name="street" id="streetInput" autocomplete="address-line1" required />
-        </label>
-        <label>
-          Villa / Apartment No.<br />
-          <input type="text" name="villa" autocomplete="address-line2" required />
-        </label>
-        <label>
-          Location (click to select on map)
-          <button type="button" class="locate-btn" id="locateMeBtn" title="Use my current location">📍 Locate Me</button><br />
-          <input type="text" name="location" id="locationInput" placeholder="Click to pick your location on the map" readonly required style="cursor:pointer; background:#fffbe9;" />
-        </label>
-      </div>
-      <label>
-        Phone Number<br />
-        <input type="text" name="phone" id="phoneInput" maxlength="13" placeholder="05X 123-4567" required autocomplete="tel" />
-        <span class="phone-hint">Format: 05X 123-4567</span>
-      </label>
-      <label style="position:relative;">
-        Amount of Boxes
-        <span class="info-icon" id="infoIcon" tabindex="0" role="button" aria-label="Each box contains 4 pieces of bread.">ℹ️</span><br />
-        <input type="number" name="boxes" id="boxesInput" min="1" max="30" value="1" required class="boxes-desktop" />
-        <select name="boxes" id="boxesSelect" class="boxes-mobile" style="display:none;"></select>
-      </label>
-      <label>
-        Special Requests<br />
-        <textarea name="special" rows="2" placeholder="Anything else? Allergies, timing, etc."></textarea>
-      </label>
-      <div class="order-summary" id="orderSummary">
-        Total: <span id="totalPrice">50</span> AED
-      </div>
-      <button type="submit">Place Order</button>
-    </form>
-    <div class="order-info">
-      <p>After submitting, we’ll contact you to confirm your order and delivery details.</p>
-      <p>Questions? DM us on <a href="https://instagram.com/Bunku.uae" target="_blank">@Bunku.uae</a> or WhatsApp 054 458 8113.</p>
-    </div>
-  </main>
-
-  <!-- Modal for Leaflet Map Picker -->
-  <div id="mapModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="mapModalTitle">
-    <div class="modal-content">
-      <button class="close" id="closeMapModal" aria-label="Close map picker">&times;</button>
-      <h3 id="mapModalTitle">Select your location</h3>
-      <div class="map-instructions">
-        Click "Locate Me" to use your current location.<br>
-        If the marker isn't correct, drag it or click the map to adjust.<br>
-        <span style="color:#a0522d; font-size:0.95em;">
-          (Tip: On mobile, location is more accurate!)
-        </span>
-      </div>
-      <div id="map"></div>
-      <button id="confirmLocation" class="confirm-btn" disabled>Confirm Location</button>
-    </div>
+  <!-- Animated Blobs Background -->
+  <div class="blobs-bg">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+    <div class="blob blob4"></div>
   </div>
 
-  <!-- Supabase JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-  <script src="script.js"></script>
+  <!-- Welcome Section -->
+  <section class="welcome-section">
+    <img src="assets/images/BunkuBreadSlogan.jpg" alt="Bunku Bread Slogan" class="slogan-img" />
+  </section>
+
+  <!-- Our Story Panel -->
+  <section class="panel" id="storyPanel">
+    <h2>Our Story</h2>
+    <div class="story-content" id="storyContent">
+      <p>
+        Bunku Bread is a <strong>home-based business</strong> that started with a love for baking and a dream to bring the taste of viral Korean bread to the UAE.
+        <span id="dots">...</span>
+        <span id="more" style="display: none;">
+          <br /><br />
+          What began as a small kitchen experiment quickly grew into a local sensation, with friends and family raving about the soft, fluffy loaves and unique flavors.
+          <br /><br />
+          Today, Bunku Bread is a beloved brand, sharing joy and deliciousness with every bite—all from the comfort of our home kitchen.
+        </span>
+      </p>
+      <button onclick="showMore()" id="readMoreBtn">Read more</button>
+      <button onclick="showLess()" id="showLessBtn" style="display:none;">Show less</button>
+    </div>
+  </section>
+
+  <!-- Place an Order Button -->
+  <section class="order-section">
+    <a href="https://bunkubread.github.io/BunkuOrder.github.io/" class="order-btn">Placing an order?</a>
+  </section>
+
+  <!-- Sticky, Fun Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <img src="assets/images/BunkuBreadLogo.jpg" alt="Bunku Bread Logo" class="footer-logo" />
+      <div class="footer-links">
+        <a href="https://instagram.com/Bunku.uae" target="_blank" rel="noopener" aria-label="Instagram" class="footer-icon">
+          <!-- Instagram SVG -->
+          <svg width="26" height="26" viewBox="0 0 50 50" fill="none">
+            <rect x="5" y="5" width="40" height="40" rx="12" stroke="#ffb347" stroke-width="3"/>
+            <circle cx="25" cy="25" r="10" stroke="#ffb347" stroke-width="3"/>
+            <circle cx="34" cy="16" r="2.5" fill="#ffb347"/>
+          </svg>
+          @Bunku.uae
+        </a>
+        <a href="https://tiktok.com/@Bunku.uae" target="_blank" rel="noopener" aria-label="TikTok" class="footer-icon">
+          <!-- TikTok SVG -->
+          <svg width="26" height="26" viewBox="0 0 50 50" fill="none">
+            <path d="M34 16.5c1.8 0 3.5-.3 5-1v5.5c-3.6 0-6.7-1.1-9-3v15.1c0 5.2-4.2 9.4-9.4 9.4S11.2 37.3 11.2 32.1c0-5.2 4.2-9.4 9.4-9.4.4 0 .8 0 1.2.1v5.1c-.4-.1-.8-.1-1.2-.1-2.4 0-4.3 1.9-4.3 4.3 0 2.4 1.9 4.3 4.3 4.3 2.4 0 4.3-1.9 4.3-4.3V11.5h5c0 2.8 2.2 5 5 5z" fill="#ffb347"/>
+          </svg>
+          @Bunku.uae
+        </a>
+        <a href="tel:0544588113" class="footer-link">054 458 8113</a>
+        <a href="mailto:Bunku.uae@gmail.com" class="footer-link">Bunku.uae@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2025 Bunku Bread. All rights reserved.</div>
+  </footer>
+
+  <script>
+    function showMore() {
+      document.getElementById("more").style.display = "inline";
+      document.getElementById("readMoreBtn").style.display = "none";
+      document.getElementById("showLessBtn").style.display = "inline-block";
+      document.getElementById("dots").style.display = "none";
+    }
+    function showLess() {
+      document.getElementById("more").style.display = "none";
+      document.getElementById("readMoreBtn").style.display = "inline-block";
+      document.getElementById("showLessBtn").style.display = "none";
+      document.getElementById("dots").style.display = "inline";
+    }
+  </script>
 </body>
 </html>
