@@ -31,7 +31,7 @@
     <div class="carousel-title">How our bread looks</div>
     <div class="carousel">
       <button class="carousel-btn" id="carouselPrev" aria-label="Previous bread">&#8592;</button>
-      <img src="assets/images/4piecebread.jpeg" alt="Bread 1" class="carousel-img" id="carouselImage" />
+      <img src="assets/images/4piecebread.jpeg" alt="Bread 1" class="carousel-img" id="carouselImage">
       <button class="carousel-btn" id="carouselNext" aria-label="Next bread">&#8594;</button>
     </div>
     <div class="carousel-caption" id="carouselCaption"></div>
@@ -90,7 +90,6 @@
   </footer>
 
   <script>
-    // Carousel logic
     const carouselImages = [
       {
         src: "assets/images/4piecebread.jpeg",
@@ -108,10 +107,15 @@
     let carouselIndex = 0;
     const carouselImg = document.getElementById('carouselImage');
     const carouselCaption = document.getElementById('carouselCaption');
+
     function updateCarousel() {
-      carouselImg.src = carouselImages[carouselIndex].src;
-      carouselImg.alt = carouselImages[carouselIndex].caption;
-      carouselCaption.textContent = carouselImages[carouselIndex].caption;
+      carouselImg.classList.add('hidden');
+      setTimeout(() => {
+        carouselImg.src = carouselImages[carouselIndex].src;
+        carouselImg.alt = carouselImages[carouselIndex].caption;
+        carouselCaption.textContent = carouselImages[carouselIndex].caption;
+        carouselImg.classList.remove('hidden');
+      }, 400);
     }
     document.getElementById('carouselPrev').onclick = function() {
       carouselIndex = (carouselIndex - 1 + carouselImages.length) % carouselImages.length;
@@ -123,7 +127,6 @@
     };
     updateCarousel();
 
-    // Read more/less
     function showMore() {
       document.getElementById("more").style.display = "inline";
       document.getElementById("readMoreBtn").style.display = "none";
